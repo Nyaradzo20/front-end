@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    color:green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#first{
+background-color:mediumaquamarine;
+    width: 52%;
+    color: #fff;
+    margin-left: 20%;
+    margin-top: 6%;
+    
+}
+#title{
+    align-items: center;
+    margin-left: 30%;
+
+}
+li{
+    list-style-type:circle;
+}
+b{
+    color: black;
+    margin-right: 25px;
+}
+
+
+
+#image{
+    align-items:center;
+    max-width:100%;
+    height:auto;
+    display:block;
+
+}
