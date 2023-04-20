@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JAVASCRIPT TUTORIAL</h1>
+    
+    <nav id="navbar"><header>
+    *****
+</header>
+<div>
+    <ul>
+       <li><a  href="#INTRODUCTION" class="nav-link">INTRODUCTION</a></li> 
+       <li><a href="#FUNCTIONS" class="nav-link">FUNCTIONS</a></li> 
+       <li><a href="#OBJECTS" class="nav-link">OBJECTS</OBJECT></a></li> 
+       <li><a href="#CLASSES" class="nav-link">CLASSES</a></li> 
+       <li><a href="#JSON" class="nav-link">JSON</a></li> 
+
+    </ul>
+
+</div>
+
+</nav>
+    
+    <main  id="main-doc">
+<section class="main-section" id="INTRODUCTION">
+
+         <header id="INTRODUCTION">INTRODUCTION</header>
+
+         <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming
+             language with first-class functions. While it is most well-known as the scripting 
+             language for Web pages, many non-browser environments also use it, such as Node.js,
+              Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, 
+            single-threaded, dynamic language, supporting object-oriented, imperative, and declarative 
+            (e.g. functional programming) styles.</p>
+
+            <p>JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
+                JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
+             <ul><li>
+                Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such 
+                as dynamically creating HTML and setting CSS styles; collecting and manipulating 
+                a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+
+                <li>Third-party APIs that allow developers to incorporate functionality in sites from other 
+                content providers, such as Twitter or Facebook.</li>
+                <li>
+                Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+
+            </p>
+            <p>
+                To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these f
+                eatures are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!
+                Variables are containers that store values. You start by declaring a variable with the let keyword, followed by the name you give to the variable
+A semicolon at the end of a line indicates where a statement ends. It is only required 
+when you need to separate statements on a single line. 
+However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see Your Guide to Semicolons in JavaScript.
+
+You can name a variable nearly anything, but there are some restrictions. (See this section about naming rules.) If you are unsure, you can check your variable name to see if it's valid.
+
+JavaScript is case sensitive. This means myVariable is not the same as myvariable. If you have problems in your code, check the case!
+
+After declaring a variable, you can give it a value:
+            </p>
+        
+
+         </section>
+
+
+        <section class="main-section" id="FUNCTIONS">
+        <header id="FUNCTIONS">FUNCTIONS</header>
+        
+            <p>Another essential concept in coding is functions, which allow you to store a piece of code that does a single task inside a defined block, and then call that code whenever you need it using a single short command — rather than having to type out the same code multiple times. In this article we'll explore fundamental concepts behind functions such as basic syntax, how to invoke and define them, scope, and parameters.</p>
+<p>The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you invoke (a fancy word for run, or execute) a built in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
+
+    Bear in mind that some built-in browser functions are not part of the core JavaScript language — some are defined as part of browser APIs, which build on top of the default language to provide even more functionality (refer to this early section of our course for more descriptions). We'll look at using browser APIs in more detail in a later module.</p>
+<p>Functions that are part of objects are called methods. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.</p>
+        
+<p>
+    And functions can contain whatever code you like — you can even call other functions from inside functions. The above function for example calls the random() function three times, which is defined by the following code:
+
+    <code>function random(number) {
+      return Math.floor(Math.random()*number);
+    }</code>
+    
+    We needed this function because the browser's built-in Math.random() function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.
+    
+    Invoking functions
+</p>
+
+
+</section>
+
+<section class="main-section" id="OBJECTS">
+
+          <header id="OBJECTS">OBJECTS</header>
+            <p>In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.</p>
+<p>
+    An object is a collection of related data and/or functionality. These usually consist of several 
+    variables and functions (which are called properties and methods when they are inside objects). 
+    Let's work through an example to understand what they look like.
+    As with many things in JavaScript, creating an object often begins with defining and initializing a variable. 
+    Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
+    <code>const person = {};
+    </code>
+</p>
+<p>Now open your browser's JavaScript console, enter person into it, and press Enter/Return. You should get a result similar to one of the below lines:
+    <code>
+        [object Object]
+Object { }
+{ }
+    </code>
+</p>
+<p>
+    Congratulations, you've just created your first object. Job done! But this is an empty object, so we can't really do much with it. Let's update the JavaScript object in our file to look like this:
+    
+    <br><code>
+        const person = {
+            name: ["Bob", "Smith"],
+            age: 32,
+            bio: function () {
+              console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+            },
+            introduceSelf: function () {
+              console.log(`Hi! I'm ${this.name[0]}.`);
+            },
+          };
+          
+    </code>
+</p>
+
+</section>
+
+
+
+
+
+
+
+
+        <section class="main-section" id="CLASSES">
+<header id="CLASSES">
+    CLASSES
+</header>
+<p>
+    In the last article, we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+
+We also talked about how it's possible to use prototypes and constructors to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
+
+In this article, we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
+You can declare a class using the class keyword. Here's a class declaration for our Person from the previous article:
+
+
+</p>
+<p><code>
+    class Person {
+
+        name;
+      
+        constructor(name) {
+          this.name = name;
+        }
+      
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name}`);
+        }
+      
+      }
+      
+</code></p>
+<p>
+    This declares a class called Person, with:
+<ul><li>
+a name property.</li>
+<li>
+a constructor that takes a name parameter that is used to initialize the new object's name property</li>
+<li>
+an introduceSelf() method that can refer to the object's properties using this.</li>
+The name; declaration is optional: you could omit it, and the line this.name = name; in the constructor 
+will create the name property before initializing it. However, listing properties explicitly in 
+the class declaration might make it easier for people reading your code to see
+ which properties are part of this class.
+</p>
+<p>You've reached the end of this article, but can
+     you remember the most important information? You can find some further tests to verify that you've retained this information before you move on </p>
+        </section>
+
+<section  class="main-section" id="JSON">
+    <header id="JSON">JSON</header>
+    <P>
+        JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
+    </P>
+    <P>JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford. Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
+
+        JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global JSON object that has methods available for converting between the two.</P>
+        <P>JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford. Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
+
+            JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global JSON object that has methods available for converting between the two.</P>
+</section>
+
+
+</main>
+    
+</body>
+</html>
