@@ -1,5 +1,50 @@
 *{
-    background:linear-gradient(40deg,cyan,wheat);
+    
     margin: 0;
     padding: 0;
+}
+body{
+    min-height: 100vh;
+   display: flex;
+    align-items: center;
+    justify-content:center;
+    background: lavenderblush;
+}
+button{
+    margin:10px;
+    width: 145px;
+    height: 40px;
+    border-radius: 25px;
+    background:lavenderblush;
+    border: 1px;
+    color: darkgray;
+    cursor: pointer;
+}
+
+.bt{
+    box-shadow:-6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.bt:focus{
+    font-size: 15px;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 18px rgba(0, 0, 0, 0.1);
+    color: white;
+    
+}
+.btn{
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.8),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    
+    
+    
+}
+.btn:focus{
+    font-size: 15px;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 18px rgba(0, 0, 0, 0.1);
+    color: white;
+
 }
